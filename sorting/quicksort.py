@@ -3,7 +3,7 @@ def quick_sort(array,low,high):
         #q is partitioning index, array[p] is now at right place.
         q = partition(array,low,high)
         #separately sort elements before partition and after partition
-        quick_sort(array,low,q)
+        quick_sort(array,low,q-1)
         quick_sort(array,q+1,high)
 
 def partition(array,low,high):
@@ -16,3 +16,8 @@ def partition(array,low,high):
     #swap the pivot number to the middle
     array[i+1],array[high] = array[high],array[i+1]
     return (i+1)
+
+array = [21,3,4,75,7,24,32,2]
+quick_sort(array,0,len(array)-1)
+for i in range(len(array)):
+    print(array[i])
