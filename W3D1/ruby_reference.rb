@@ -29,7 +29,7 @@ end
 my_hash.[]=(:key, :value)
 
 class Cat 
-    attr_accessor :name
+    # attr_accessor :name
 end
 my_cat = Cat.new
 my_cat.name = "Breakfast" # == my_cat.name=("Breakfast")

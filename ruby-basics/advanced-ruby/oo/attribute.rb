@@ -1,7 +1,7 @@
 class Dog
     #Creating getter methods for the attributes we want to expose is pretty repetitive. 
     attr_accessor :age, :name
-    #attr_reader (:age, :name)
+    #attr_reader :age, :name
     def initialize(name, age, favorite_food)
       @name = name
       @age = age
