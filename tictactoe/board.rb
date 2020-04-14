@@ -45,13 +45,30 @@ class Board
     end
 
     def win_diagonal?(mark)
+        left_to_right = (0...@grid.length).all? do |i|
+            pos = [i, i]
+            self[pos] == mark
+        end
 
+        right_to_left = (0...@grid.length).all? do |i|
+            row = i
+            col = @grid.length - 1 - i
+            pos = [row, col]
+            self[pos] == mark
+        end
+
+        left_to_right || right_to_left
     end
+
+
     def win?(mark)
         win_col?(mark) || win_row?(mark) || win_diagonal?(mark)
     end
 
     def empty_positions?
-        @grid.any? {}
+        indices = (0...@grid.length).to_a
+        positions = indices.product(indices)
+        positions.any? { |pos| empty?(pos) }
     end
+    
 end
