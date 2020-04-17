@@ -22,4 +22,30 @@ class Board
         @grid[row][col] = val
     end
 
+    def attack(pos)
+        if self[pos] == :S
+            self[pos]= :H
+            puts "you sunk my battleship!"
+            return true
+        else
+            self[pos]= :X
+            return false
+        end
+    end
+
+    def place_random_ships
+    end
+
+    def hidden_ships_grid
+    end
+
+    def ::print_grid
+    end
+
+    def cheat
+        
+    end
+
+    def print
+    end
 end
