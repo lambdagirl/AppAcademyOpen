@@ -25,11 +25,12 @@ class Board
     row, col = pos
     grid[row][col] = val
   end
+
   def populate
     values = ("A".."Z").to_a
     num_pairs= size*size/2
     values = values.shuffle.take(num_pairs) * 2
-    cards = values.map { |val| Card.new(TRUE,val)}
+    cards = values.map { |val| Card.new(val)}
     grid.each_index do |i|
       grid[i].each_index do |j|
         self[[i,j]] = cards.pop 
@@ -38,6 +39,7 @@ class Board
   end
 
   def render
+    system("clear")
     puts "  #{(0...size).to_a.join(' ')}"
     grid.each_with_index do |row,i|
         puts "#{i} #{row.join(' ')}"
@@ -49,14 +51,27 @@ class Board
       row.all?(&:faceup?)
     end
   end
+
+  def reveal(pos)
+    if self[pos].faceup?
+      puts "You can't flip a card that has already been revealed."
+    else
+      self[pos].reveal
+    end
+    self[pos].value
+  end
+
+  def hide(pos)
+    self[pos].hide
+  end
 end
 
 
 
   
-if __FILE_ = $PROGRAM_NAME
-  b = Board.new(4)
-  b.render
-  require 'pry'; binding.pry
-  puts b.grid.won?
-end
+# if __FILE_ = $PROGRAM_NAME
+#   b = Board.new(4)
+#   b.render
+#   require 'pry'; binding.pry
+#   puts b.grid.won?
+# end
