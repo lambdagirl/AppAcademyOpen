@@ -38,7 +38,10 @@ class Board
   end
 
   def render
-    puts 
+    puts "  #{(0...size).to_a.join(' ')}"
+    grid.each_with_index do |row,i|
+        puts "#{i} #{row.join(' ')}"
+    end
   end
 
   def won?
@@ -53,6 +56,7 @@ end
   
 if __FILE_ = $PROGRAM_NAME
   b = Board.new(4)
+  b.render
   require 'pry'; binding.pry
   puts b.grid.won?
 end
