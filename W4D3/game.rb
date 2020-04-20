@@ -33,15 +33,17 @@ class Game
   end
 
   def get_user_input
-    puts "Please enter the position of the card you'd like to flip (e.g., '2,3')"
-    print "> "
+
     pos = nil
-    until valid_pos?(pos)
+    until pos && valid_pos?(pos)
+      puts "Please enter the position of the card you'd like to flip (e.g., '2,3')"
+      print "> "
       pos = parse(STDIN.gets.chomp)
     end
     pos
   end
 
+# TODO: check id it's int
   def valid_pos?(pos)
     pos.is_a?(Array) &&
       pos.count == 2 &&
