@@ -59,7 +59,7 @@ class Board
   end
 
   def solve
-    
+    for 
   end
 
 
