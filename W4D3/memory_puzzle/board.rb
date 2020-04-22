@@ -9,6 +9,7 @@
 require 'colorize'
 
 require_relative "card"
+
 class Board
   attr_reader :grid, :size
   def initialize(size=4)
@@ -55,6 +56,7 @@ class Board
     end
   end
 
+
   def reveal(pos)
     if self[pos].faceup?
       puts "You can't flip a card that has already been revealed."
@@ -69,7 +71,10 @@ class Board
   end
 end
 
-
+  def revealed?(pos)
+    self[pos].revealed?
+  end
+  
 
   
 # if __FILE_ = $PROGRAM_NAME

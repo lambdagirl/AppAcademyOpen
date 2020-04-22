@@ -13,6 +13,8 @@
 #It wouldn't be an interesting game if the player could see their previous moves. Run system("clear") before rendering the Board. This will hide any previous output from the player. sleep(n) will pause the program for n seconds. Use this method to (temporarily) show the player an incorrect guess before flipping the Cards face-down again.
 require_relative "board"
 require_relative "player"
+require_relative "computer_player"
+
 require 'colorize'
 
 class Game
@@ -39,12 +41,14 @@ class Game
     end
     pos
   end
+
   
   # TODO: check id it's int
+
   def valid_pos?(pos)
     pos.is_a?(Array) &&
-      pos.count == 2 &&
-      pos.all? { |x| x.between?(0, board.size - 1) }
+      pos.count == 2 
+      # pos.all? { |x| x< board.size && x >=0}
   end
 
   def compare_guess(new_pos)
@@ -65,6 +69,7 @@ class Game
 
   def make_guess(pos)
     value = board.reveal(pos)
+    player.receive_revealed_card(pos, value)
     board.render
     compare_guess(pos)
 
@@ -79,6 +84,6 @@ end
 if __FILE_ = $PROGRAM_NAME
   size = ARGV.empty? ? 4 : ARGV.shift.to_i
 
-  g = Game.new(size, Player.new())
+  g = Game.new(size, ComputerPlayer.new(size))
   g.play
 end

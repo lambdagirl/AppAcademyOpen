@@ -1,7 +1,7 @@
 
 class Player
   attr_accessor :previsous_guess
-  def initialize
+  def initialize(_size)
     @previsous_guess = nil
   end
 
@@ -19,5 +19,6 @@ class Player
     string.split(",").map { |x| Integer(x) }
   end
 
-  
+  def receive_revealed_card(pos,val)
+  end
 end

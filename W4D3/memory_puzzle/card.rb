@@ -31,5 +31,9 @@ class Card
     faceup? ? value.to_s : " "
   end
 
+
+  def ==(object)
+    object.is_a?(self.class) && object.value == value
+  end
 end
 
