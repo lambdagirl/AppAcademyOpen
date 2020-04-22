@@ -1,11 +1,3 @@
-#The Board is responsible for keeping track of all your Cards. 
-#You'll want a grid instance variable to contain Cards. 
-#Useful methods:
-
-#populate should fill the board with a set of shuffled Card pairs
-#render should print out a representation of the Board's current state
-#won? should return true if all cards have been revealed.
-#reveal should reveal a Card at guessed_pos (unless it's already face-up, in which case the method should do nothing). It should also return the value of the card it revealed (you'll see why later).
 require 'colorize'
 
 require_relative "card"
@@ -76,10 +68,3 @@ end
   end
   
 
-  
-# if __FILE_ = $PROGRAM_NAME
-#   b = Board.new(4)
-#   b.render
-#   require 'pry'; binding.pry
-#   puts b.grid.won?
-# end

@@ -1,8 +1,8 @@
 
 class Player
-  attr_accessor :previsous_guess
+  attr_accessor :previous_guess
   def initialize(_size)
-    @previsous_guess = nil
+    @previous_guess = nil
   end
 
   def get_user_input
@@ -11,7 +11,7 @@ class Player
   end
 
   def prompt 
-    puts "Please enter the position of the card you'd like to flip (e.g., '2,3')"
+    puts "Please enter the position of the card you'd like to flip (e.g., '1,3')"
       print "> "
   end
 
@@ -21,4 +21,5 @@ class Player
 
   def receive_revealed_card(pos,val)
   end
+  
 end
