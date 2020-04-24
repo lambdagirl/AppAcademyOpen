@@ -11,7 +11,7 @@ class Board
 
     def []=(pos, val)
         row, col = pos
-        @grid[row][col] = val
+        @grid[row][col] = val  
     end
 
     def valid?(pos)
