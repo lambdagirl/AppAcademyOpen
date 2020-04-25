@@ -22,7 +22,6 @@ class Employee
 end
 
 #bonus = (total salary of all sub-employees) * multiplier
-
 class Manager < Employee
   attr_accessor :employees
 
@@ -41,7 +40,7 @@ class Manager < Employee
   end
 
   protected
-  
+
   def total_subsalary
     total_subsalary = 0
     self.employees.each do |employee|
