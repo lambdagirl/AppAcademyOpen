@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/W4D2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W4D4/minesweeper" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/react" vcs="Git" />
   </component>
 </project>
