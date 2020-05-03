@@ -1,4 +1,4 @@
-
+#O(n^2) quadratic time
 #O(1) constant space
 def two_sum?(arr, target_sum)
   arr.each_with_index do |a, i |
@@ -52,4 +52,16 @@ end
 arr = [0, 1, 5, 7]
 p two_sum_hash_map?(arr, 6) # => should be true
 p two_sum_hash_map?(arr, 10) # => should be false
+
+
+def two_sum_hash_list?(arr, target_sum)
+  h = {}
+
+  arr.each do |el|
+    if h[target_sum - el]
+      return [el,target_sum - el]
+    end
+    h[el] = true
+  end
+end
 
