@@ -1,0 +1,47 @@
+#first-div,
+#second-div {
+  width: 200px;
+  height: 200px;
+  padding: 50px;
+  border: 5px solid black;
+}
+
+#first-div {
+  background-color: #39cccc;
+}
+
+#second-div {
+  background-color: #ff4136;
+  /* What if we don't want the padding and border to be added on top of the width, 
+  but rather be included in the total width calculation */
+  box-sizing: border-box;
+}
+.min-height-div {
+  min-height: 10px;
+  display: inline-block;
+}
+.image-1-container {
+  height: 600px;
+  width: 200px;
+
+  background-color: rebeccapurple;
+}
+
+/* By default, images will want to render with the full glorious dimensions. 
+How can we combat this brash egotism? Tell the image to obey the constraints 
+of its container by giving it a width of 100%. */
+.image-1-container img {
+  width: 100%;
+}
+
+p {
+  background-color: #7fdbff;
+}
+
+.image-2-container {
+  /* width still defaults to 200px but now it can grow to accomodate any image */
+  display: inline-block;
+  min-width: 200px;
+  height: 600px;
+  background: chartreuse;
+}
