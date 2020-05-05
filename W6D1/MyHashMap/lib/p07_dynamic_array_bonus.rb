@@ -117,7 +117,9 @@ class DynamicArray
 
   def ==(other)
     return false unless [Array, DynamicArray].include?(other.class)
-    # ...
+    return false unless length == other.length
+    each_with_index { |el, i| return false unless el == other[i] }
+    true
   end
 
   alias_method :<<, :push
@@ -126,10 +128,9 @@ class DynamicArray
   private
 
   def resize!
-    old_store = self.store
-    self.store = StaticArray.new( capacity * 2)
-    old_store.each_with_index {|ele, i| self.store[i] = ele}
-  end
-  
 
+  new_store = StaticArray.new(capacity * 2)
+  each_with_index { |el, i| new_store[i] = el }
+  self.store = new_store
+  end
 end
