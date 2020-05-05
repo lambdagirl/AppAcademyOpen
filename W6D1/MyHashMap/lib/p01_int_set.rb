@@ -87,6 +87,8 @@ end
 # The goal is to have store.length > N at all times.
 # You may want to implement an inspect method to make debugging easier.
 # What are the time complexities of the operations of your set implementation?
+
+#https://www.rubyguides.com/2020/04/self-in-ruby/
 class ResizingIntSet
   attr_accessor :store, :count
 
