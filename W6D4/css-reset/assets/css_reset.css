@@ -1,0 +1,38 @@
+/* Clear default margin, padding and border from any elements that we're using in our HTML.
+Make sure font properties get inherited.
+Remove default styling from lists. ####ul ol not li
+Give text in the body a line-height of 1.5.
+Make sure images always take up the width of their parents. */
+html
+  head
+  title
+  body
+  header
+  img
+  nav
+  ul
+  li
+  h2
+  h1
+  img
+  ol
+  label
+  input
+  select
+  footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100px;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+}
+ol ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
