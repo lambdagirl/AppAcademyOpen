@@ -62,3 +62,69 @@ professor.courses # an array of the courses a professor teaches
 #
 # The `?` is filled with `professor.id`.
 
+
+###Many to Many has_many :through
+
+class Physician < ApplicationRecord
+  has_many(
+    :appointments,
+    class_name: 'Appointment',
+    foreign_key: :physician_id,
+    primary_key: :id
+  )
+
+  has_many :patients, through: :appointments, source: :patient
+end
+
+class Appointment < ApplicationRecord
+  belongs_to(
+    :physician,
+    class_name: 'Physician',
+    foreign_key: :physician_id,
+    primary_key: :id
+  )
+
+  belongs_to(
+    :patient,
+    class_name: 'Patient',
+    foreign_key: :patient_id,
+    primary_key: :id
+  )
+end
+
+class Patient < ApplicationRecord
+  has_many(
+    :appointments
+    class_name: 'Appointment',
+    foreign_key: :patient_id,
+    primary_key: :id
+  )
+
+  has_many :physicians, through: :appointments, source: :physician
+end
+
+physician.appointments
+# SELECT
+#   appointments.*
+# FROM
+#   appointments
+# WHERE
+#   appointments.physician_id = ?
+
+appointment.patient
+# SELECT
+#  patients.*
+# FROM
+#  patients
+# WHERE
+#  patients.id = ?
+
+physician.patients
+# SELECT
+#  patients.*
+# FROM
+#  appointments
+# JOIN
+#  patients ON appointments.patient_id = patients.id
+# WHERE
+#  appointments.physician_id = ?
