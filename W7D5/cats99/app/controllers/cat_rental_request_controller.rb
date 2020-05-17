@@ -1,0 +1,3 @@
+class CatRentalRequestController < ApplicationController
+  
+end

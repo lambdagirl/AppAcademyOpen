@@ -12,4 +12,8 @@ class Cat < ApplicationRecord
     age = (diff/365).to_i
     age
   end
+
+  has_many :rental_request
+    class_name: :CatRentalRequest,
+    dependent: :destroy
 end
