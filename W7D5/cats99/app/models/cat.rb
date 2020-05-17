@@ -1,9 +1,9 @@
 require 'date'
 class Cat < ApplicationRecord
-  
+
+  CAT_COLORS = %w(red yellow white black brown multi-color).freeze
   validates :birth_date, :color, :name, :sex, presence: true
-  validates :color, inclusion: {in: ['red', 'yellow', 'white', 'black', 'brown', 'multi-color'],
-          message: "%{value} is not a valid color"}
+  validates :color, inclusion: CAT_COLORS
   validates :sex, inclusion: {in: ['F', 'M'],
           message: "%{value} is not a valid sex"}  
   
