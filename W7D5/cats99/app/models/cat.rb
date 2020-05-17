@@ -1,5 +1,6 @@
 require 'date'
 class Cat < ApplicationRecord
+  
   validates :birth_date, :color, :name, :sex, presence: true
   validates :color, inclusion: {in: ['red', 'yellow', 'white', 'black', 'brown', 'multi-color'],
           message: "%{value} is not a valid color"}
