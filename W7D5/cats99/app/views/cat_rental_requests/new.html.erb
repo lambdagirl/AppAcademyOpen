@@ -1,8 +1,7 @@
 <h1>New Rental Request</h1>
-<form>
-  <%# :cat_id, :end_date, :start_date, :status %>
+<form action="<%= cat_rental_requests_url %>" method="post">
   <label for="cat_rental_request_cat_id">cat_id</label>
-  <select name="cat_rental_request_cat_id[cat_id]" id="cat_rental_request_cat_id">
+  <select name="cat_rental_request[cat_id]" id="cat_rental_request_cat_id">
     <option disabled selected >--select a cat--</option>
     <%= Cat.all.each do |cat| %>
       <option
