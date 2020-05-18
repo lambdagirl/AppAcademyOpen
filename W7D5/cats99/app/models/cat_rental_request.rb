@@ -1,7 +1,7 @@
 class CatRentalRequest < ApplicationRecord
   validates :cat_id, :end_date, :start_date, :status, presence: true
   validates :status, inclusion: {in: ['PENDING', 'APPROVED', 'DENIED']}
-  validates :start_must_come_before_end
+  # validates :start_must_come_before_end
   belongs_to :cat
 
   def overlapping_requests
@@ -45,6 +45,7 @@ class CatRentalRequest < ApplicationRecord
   def approved?
     self.status = 'APPROVED'
   end
+  
   def pending?
     self.status == 'PENDING'
   end
