@@ -1,0 +1,60 @@
+p,
+a,
+input {
+  font-family: "Pacifico", cursive, sans-serif;
+  font-size: 18px;
+}
+h1,
+h2 {
+  font-family: "Pacifico", cursive, sans-serif;
+}
+body {
+  background-color: #fafafa;
+}
+
+.main-content {
+  width: 800px;
+  min-height: 100vh;
+  margin: auto;
+
+  border: solid grey;
+  border-width: 1px;
+  background-color: #fafafa;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  .main-logo {
+    font-size: 28px;
+    color: darkcyan;
+    margin-bottom: 20px;
+  }
+  .user-detail {
+    display: flex;
+    align-self: center;
+    p {
+      margin: 10px;
+    }
+  }
+  border-bottom: brown solid;
+}
+input[type="submit"] {
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+  &:hover {
+    background-color: brown;
+    cursor: pointer;
+  }
+}

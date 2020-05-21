@@ -10,21 +10,30 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <nav>
-  
-        <%= form_tag session_path, method: "delete" do %>
-        <%= submit_tag "Delete" %>
-        <%= hidden_field_tag 'authenticity_token', form_authenticity_token %>
-      <% end %>
 
+        <nav>
+    <h1 class="main-logo">Dogram</h1>
+    <% if logged_in? %>
+
+      <div class="user-detail">
+        <p>Logged in as: <%= current_user.email %></p>
+
+        <%= form_tag session_path, method: "delete" do %>
+        <%= submit_tag "sign out" %>
+        <%= hidden_field_tag 'authenticity_token', form_authenticity_token %>
+        <% end %>
+      </div>
       </nav>
     <% end %>
 
     <% if flash[:errors] %>
       <p><%= flash[:errors].join(", ") %></p>
     <% end %>
-
+      <% if flash[:notice] %>
+        <p><%= flash[:notice] %></p>
+      <% end %>
+  <div class="main-content">
     <%= yield %>
+    </div>
   </body>
 </html>
