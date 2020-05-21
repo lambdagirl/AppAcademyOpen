@@ -1,0 +1,9 @@
+<h1>100 Days Challenge!</h1>
+
+<ul>
+  <% @challenges.each do |challenge| %>
+    <li><a href="<%= challenge_url(challenge) %>"><%= challenge.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="<%= new_challenge_url %>">Create Challenge</a>

@@ -1,0 +1,23 @@
+<% action = (challenge.persisted? ? challenge_url(challenge) : challenges_url) %>
+<% method = (challenge.persisted? ? :patch : :post) %>
+
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>" />
+
+  <label for="challenge_name">name</label>
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>"
+  />
+  <input
+    type="text"
+    name="challenge[name]"
+    id="challenge_name"
+    value="<%= challenge.name %>"
+  />
+
+  <% submit_text = (challenge.persisted? ? 'Update' : 'Create') + ' challenge!'
+  %>
+  <input type="submit" value="<%= submit_text %>" />
+</form>

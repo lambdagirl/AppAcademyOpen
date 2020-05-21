@@ -1,0 +1,12 @@
+<h1><%=@challenge.name%></h1>
+
+<ul class='page-links'>
+  <li><a class='button' href="<%= edit_challenge_url(@challenge) %>">Edit Challenge</a></li>
+  <li>
+    <form action="<%= challenge_url(@challenge) %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+      <input type="submit" value="Destroy Challenge">
+    </form>
+  </li>
+</ul>
