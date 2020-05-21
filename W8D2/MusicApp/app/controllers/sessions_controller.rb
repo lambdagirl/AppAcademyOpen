@@ -4,21 +4,31 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email:params[:user][:email]).try(
-      :authenticate, params[:user][:password])
+    user = User.find_by_credentials(
+
+      params[:user][:email],
+      params[:user][:password]
+    )
+
     if user.nil?
-      flash.now[:errors] =['invalid credentials']
+      flash.now[:errors] = ["Invalid credentials."]
       render :new
+
+    # Notice we have User#activated? even though we didn't define it!
+    # Rails gives you this method for free because it matches a column name.
+    # elsif !user.activated?
+    #   flash.now[:errors] = ['You must activate your account first! Check your email.']
+    #   render :new
     else
+      log_in_user!(user)
       redirect_to user_url(user)
     end
   end
 
-
   def destroy
-    logout!
+    current_user.reset_session_token!
+    session[:session_token] = nil
+
     redirect_to new_session_url
   end
-
-
 end

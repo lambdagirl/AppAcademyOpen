@@ -11,14 +11,20 @@
 
   <body>
     <% if logged_in? %>
-      <form action="<%= session_url %>" method="POST"> 
-         <input
-              type="hidden"
-              name="authenticity_token"
-              value="<%= form_authenticity_token %>">
-          <input type="submit" value="Logout" />
-      </form>
+      <nav>
+  
+        <%= form_tag session_path, method: "delete" do %>
+        <%= submit_tag "Delete" %>
+        <%= hidden_field_tag 'authenticity_token', form_authenticity_token %>
+      <% end %>
+
+      </nav>
     <% end %>
+
+    <% if flash[:errors] %>
+      <p><%= flash[:errors].join(", ") %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
