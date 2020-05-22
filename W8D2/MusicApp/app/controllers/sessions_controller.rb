@@ -16,9 +16,9 @@ class SessionsController < ApplicationController
 
     # Notice we have User#activated? even though we didn't define it!
     # Rails gives you this method for free because it matches a column name.
-    # elsif !user.activated?
-    #   flash.now[:errors] = ['You must activate your account first! Check your email.']
-    #   render :new
+    elsif !user.activated?
+      flash.now[:errors] = ['You must activate your account first! Check your email.']
+      render :new
     else
       log_in_user!(user)
       redirect_to user_url(user)

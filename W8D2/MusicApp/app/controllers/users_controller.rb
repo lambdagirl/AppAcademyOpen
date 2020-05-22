@@ -2,12 +2,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    msg = UserMailer.welcome_email(@user)
-    msg.deliver_now
-    
+
+
     if  @user.save
-      log_in_user!(@user)
-      redirect_to user_url(@user)
+      UserMailer.welcome_email(@user).deliver_now!
+      flash[:notice] = "successfully created your account! Check your inbox for an activation email"
+      redirect_to new_session_url 
+
+      # log_in_user!(@user)
+      # redirect_to user_url(@user)
     else 
       flash.now[:errors] = @user.errors.full_messages
       render :new
@@ -23,6 +26,15 @@ class UsersController < ApplicationController
     render :new
   end
 
+  def activate
+    @user = User.find_by(activation_token: params[:activation_token])
+    @user.activate!
+    log_in_user!(@user)
+    flash[:notice] ="successfully actived your account!"
+    redirect_to root_url
+  end
+
+  private
   def user_params
     params.require(:user).permit(:email,:password)
   end

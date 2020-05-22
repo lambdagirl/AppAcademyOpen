@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     session[:session_token] = user.reset_session_token!
   end
 
-  def require_user!
+  def require_login!
     redirect_to new_session_url if current_user.nil?
   end
 end

@@ -1,10 +1,11 @@
 class User < ApplicationRecord
-  validates :email, :session_token, uniqueness: true, presence: true
+  validates :activation_token, :email, :session_token, uniqueness: true, presence: true
   validates :password, length: { minimum: 6}, allow_nil: true , presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
   has_secure_password
 
   after_initialize :ensure_session_token
+  after_initialize :set_activation_token
 
   has_many :notes
   def self.generate_session_token
@@ -32,5 +33,22 @@ class User < ApplicationRecord
     else
       nil
     end
+  end
+
+  def set_activation_token
+    self.activation_token = generate_unique_activation_token
+  end
+
+############ for mailler #########################
+  def generate_unique_activation_token
+    token = SecureRandom.urlsafe_base64(16)
+    while self.class.exists?(session_token: token)
+      token = SecureRandom.urlsafe_base64(16)
+    end
+    token
+  end
+
+  def activate!
+    self.update_attribute(:activated, true)
   end
 end
