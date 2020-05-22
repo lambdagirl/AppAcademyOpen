@@ -1,4 +1,5 @@
 class ChallengesController < ApplicationController
+    before_action :require_user!
     def new
       @challenge = Challenge.new
       render :new

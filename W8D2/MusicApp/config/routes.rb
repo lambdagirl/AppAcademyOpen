@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   resources :challenges
+  resources :notes, only: [:create, :destroy]
 end

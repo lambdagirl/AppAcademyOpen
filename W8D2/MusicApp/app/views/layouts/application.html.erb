@@ -13,9 +13,12 @@
 
         <nav>
     <h1 class="main-logo">Dogram</h1>
+          <a href="<%= challenges_url %>">home</a>
+
     <% if logged_in? %>
 
       <div class="user-detail">
+
         <p>Logged in as: <%= current_user.email %></p>
 
         <%= form_tag session_path, method: "delete" do %>

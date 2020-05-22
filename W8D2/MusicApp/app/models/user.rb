@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :notes
   def self.generate_session_token
     token = SecureRandom.urlsafe_base64(16)
     while self.exists?(session_token: token)
