@@ -48,6 +48,6 @@ class ChallengesController < ApplicationController
     end
     private
     def challenge_params
-      params.require(:challenge).permit(:name)
+      params.require(:challenge).permit(:name, :start_date)
     end
   end

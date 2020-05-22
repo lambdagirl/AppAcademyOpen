@@ -16,8 +16,17 @@
     id="challenge_name"
     value="<%= challenge.name %>"
   />
+  <label for="challenge_start_date">start date</label>
+  <input
+    type="date"
+    name="challenge[start_date]"
+    value="<%= challenge.start_date %>"
+    id="challenge_start_date"
+  >
+  <br>
 
-  <% submit_text = (challenge.persisted? ? 'Update' : 'Create') + ' challenge!'
+  
+<% submit_text = (challenge.persisted? ? 'Update' : 'Create') + ' challenge!'
   %>
   <input type="submit" value="<%= submit_text %>" />
 </form>
