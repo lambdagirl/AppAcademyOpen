@@ -1,0 +1,79 @@
+.main-content {
+  margin-top: 20px;
+}
+.main-content header {
+  font-weight: bold;
+}
+.main-story {
+  margin-top: 10px;
+}
+
+.main-story section {
+  margin-bottom: 20px;
+}
+.main-story ul {
+  list-style: initial;
+  padding-left: 15px;
+}
+
+.main-story ul li {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.byline {
+  margin: 4px 1px;
+  color: $gray;
+  transform: to-upper-case($string: "");
+  font-weight: 400;
+  font-size: 11px;
+}
+.opinion {
+  margin-top: 10px;
+}
+.opinion-list {
+  list-style: initial;
+  padding-left: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.opinion-list li {
+  margin: 5px 0;
+}
+.opinion-sign-up {
+  margin: 20px 0;
+}
+.kicker {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.comments {
+  color: #326891;
+  vertical-align: bottom;
+}
+.opinion-sign-up {
+  margin: 20px 0;
+}
+
+.opinions-list li {
+  margin: 5px 0;
+}
+
+.opinions-list {
+  list-style: initial;
+  padding-left: 15px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+article {
+  margin: 10px 0;
+}
+
+article hr {
+  width: 50%;
+  color: $gray;
+}
+.kicker {
+  margin-bottom: 5px;
+}
