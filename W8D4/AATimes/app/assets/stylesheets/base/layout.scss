@@ -80,3 +80,24 @@ hr {
 .thumbnail img {
   object-fit: cover;
 }
+
+.input-wrapper button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-wrapper input {
+  flex: 1;
+  // flex 1, take up the space right nextt to it.
+  padding: 0 10px;
+  border: 1px solid $gray;
+  border-right: none;
+}
+.input-wrapper {
+  display: flex;
+  margin: 5px 0;
+}
+small {
+  color: $gray;
+  font-size: 9px;
+}
