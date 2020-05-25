@@ -42,3 +42,15 @@
 .right-nav i {
   font-size: 16px;
 }
+
+@media all and (max-width: 1000px) {
+  .right-nav button {
+    display: none;
+  }
+  .left-nav {
+    margin: 0;
+  }
+  .main-nav {
+    padding-bottom: 20px;
+  }
+}

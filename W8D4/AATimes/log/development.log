@@ -13762,3 +13762,26 @@ Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb
 Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590352180450" for ::1 at 2020-05-24 13:29:40 -0700
 Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590352185943" for ::1 at 2020-05-24 13:29:45 -0700
 Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590352185944" for ::1 at 2020-05-24 13:29:45 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353005116" for ::1 at 2020-05-24 13:43:25 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353005117" for ::1 at 2020-05-24 13:43:25 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Library/Ruby/Gems/2.6.0/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353013133" for ::1 at 2020-05-24 13:43:33 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353013134" for ::1 at 2020-05-24 13:43:33 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353042943" for ::1 at 2020-05-24 13:44:02 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353042943&livereload=1590353042943" for ::1 at 2020-05-24 13:44:02 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353095046&livereload=1590353042943" for ::1 at 2020-05-24 13:44:55 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353095047&livereload=1590353042943" for ::1 at 2020-05-24 13:44:55 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353111291&livereload=1590353042943" for ::1 at 2020-05-24 13:45:11 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353111292&livereload=1590353042943" for ::1 at 2020-05-24 13:45:11 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353123566&livereload=1590353042943" for ::1 at 2020-05-24 13:45:23 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353123567&livereload=1590353042943" for ::1 at 2020-05-24 13:45:23 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353128769&livereload=1590353042943" for ::1 at 2020-05-24 13:45:28 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353128770&livereload=1590353042943" for ::1 at 2020-05-24 13:45:28 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353136909&livereload=1590353042943" for ::1 at 2020-05-24 13:45:36 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353136910&livereload=1590353042943" for ::1 at 2020-05-24 13:45:36 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353170579&livereload=1590353042943" for ::1 at 2020-05-24 13:46:10 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353170581&livereload=1590353042943" for ::1 at 2020-05-24 13:46:10 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353178003&livereload=1590353042943" for ::1 at 2020-05-24 13:46:18 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353178004&livereload=1590353042943" for ::1 at 2020-05-24 13:46:18 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353188224&livereload=1590353042943" for ::1 at 2020-05-24 13:46:28 -0700
+Started GET "/assets/application.self-6df36eb60eb25d845cb6cfd9514fdef047c78e6ccb06e0b147d9c2c4db6c2f82.css?body=1&livereload=1590353188228&livereload=1590353042943" for ::1 at 2020-05-24 13:46:28 -0700
