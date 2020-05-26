@@ -10,6 +10,11 @@ class User < ApplicationRecord
     primary_key: :id,
     inverse_of: :moderator
 
+  has_many :posts,
+    class_name: :Post,
+    foreign_key: :author_id,
+    primary_key: :id
+
   has_secure_password
 
   after_initialize :ensure_session_token
