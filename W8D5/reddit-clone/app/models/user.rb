@@ -2,7 +2,13 @@ class User < ApplicationRecord
   validates :username, :session_token, presence: true, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true, presence: true
   
-  has_many :votes, inverse_of: :user
+  has_many :votes, inverse_of: :users
+  
+  has_many :subs,
+    class_name: :Sub,
+    foreign_key: :moderator_id,
+    primary_key: :id,
+    inverse_of: :moderator
 
   has_secure_password
 
