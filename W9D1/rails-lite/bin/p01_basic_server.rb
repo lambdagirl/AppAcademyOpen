@@ -17,7 +17,7 @@ require 'rack'
 ######basic Rack########
 # Rack::Server.start(
 #   app: Proc.new do |env|
-#     ['200', {'Content-Type' => 'text/html'},['hello world']]
+#     ['200', {'Content-Type' => res'text/html'},['hello world']]
 #   end
 # )
 
