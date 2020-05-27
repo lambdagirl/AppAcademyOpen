@@ -49,7 +49,19 @@ class ControllerBase
   # pass the rendered html to render_content
   def render(template_name)
 
+    dir_path = File.dirname(__FILE__)
+    template_name = File.join(dir_path,"..","views", 
+                self.class.name.underscore,
+                "#{template_name}.html.erb"
+              )
+    code = File.read(template_name)
+
+    render_content(
+      ERB.new("<%= code %>").result(binding),
+      'text/html'
+    )
   end
+
 
   # method exposing a `Session` object
   def session
