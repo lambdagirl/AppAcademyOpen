@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  width: 900px;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.footer-content {
+  align-self: center;
+  display: block;
+}
+.footer-links {
+  align-self: center;
+  display: flex;
+  padding: 20px;
+}
+
+.footer-links > li {
+  padding-left: 20px;
+}
+
+.footer-links > li:hover {
+  padding-left: 20px;
+  color: black;
+}
