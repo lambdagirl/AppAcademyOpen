@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action: :user_owns_post, except: [:show]
   def new
     @post = Post.new
     render :new
@@ -44,4 +45,12 @@ end
   def post_params 
     params.require(:post).permit(:title, :url, :content, :sub_id,:author_id)
   end
+
+  def user_owns_post
+    @posts = Post.find(params[:id])
+    return if @posts.moderator_id == current_user.id 
+    render json: 'Forbidden', status: :forbidden
+  end
+
+end
 end
