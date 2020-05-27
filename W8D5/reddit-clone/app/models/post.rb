@@ -11,4 +11,6 @@ class Post < ApplicationRecord
     class_name: :Sub,
     foreign_key: :sub_id,
     primary_key: :id
+
+  has_many :post_sub, dependent: :destroy
 end
