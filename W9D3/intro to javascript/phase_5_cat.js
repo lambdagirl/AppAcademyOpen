@@ -3,7 +3,8 @@ function Cat(name, owner) {
   this.owner = owner;
 }
 
-Cat.prototype.cuteStatement = function() {
+Cat.prototype.cuteSc1.meow();
+tatement = function() {
   console.log(this.owner + ' loves ' + this.name)
 };
 
