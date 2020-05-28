@@ -6,6 +6,9 @@
   margin: 0 auto;
   color: #aaa;
   font-size: 14px;
+  border-top: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .footer-content {
