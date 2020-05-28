@@ -1,9 +1,9 @@
 /* PHASE 6: Sidebar */
 .profile-picture {
   margin-top: -120px;
-  z-index: auto;
   position: relative;
   border: 1px solid black;
+  border-radius: 5px;
 }
 .profile-info {
   padding: 10px 0;
@@ -25,4 +25,9 @@
   font-weight: bold;
   border-top: 1px #ccc solid;
   padding: 5px;
+}
+
+.profile-nav li:hover {
+  background-color: #eee;
+  cursor: pointer;
 }
