@@ -42,7 +42,20 @@ function curriedSum(numArgs){
     }
     return _curriedSum;
 }
-const sum4 = curriedSum(4);
-sum4(5)(30)(20)(1); // => 56
+const sumCurry = curriedSum(4);
+sumCurry(5)(30)(20)(1); // => 56
 //_curriedSum keeps collecting arguments and returning itself until it has enough arguments, at which point it actually does the required work of summing.
+
+Function.prototype.curry1 = function(nArg){
+    const argArray =[];
+    const _curriedFn =(arg) => {
+        argArray.push(arg);
+        if (argArray.length === nArg){
+            return this(...argArray);
+        } else{
+            return _curriedFn;
+        }
+    };
+    return _curriedFn;
+}
 
