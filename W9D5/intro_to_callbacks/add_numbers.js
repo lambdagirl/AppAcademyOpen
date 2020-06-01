@@ -10,9 +10,10 @@ function addNumbers(sum,numsLeft, completionCallback){
             const num1 = parseFloat(numString);
             sum = sum+num1;
             console.log("Partial sum: " + sum);
-            this.addNumbers(sum,numsLeft-1,completionCallback);
+            addNumbers(sum,numsLeft-1,completionCallback);
         });
     } else {
+    //pass the total sum to a callback when done.
     completionCallback(sum);
   }
 }
