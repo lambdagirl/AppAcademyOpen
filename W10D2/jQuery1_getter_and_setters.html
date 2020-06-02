@@ -1,0 +1,49 @@
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<input type="text" id="cool-input">
+
+<script>
+    window.setInterval(()=>{
+        const $coolInput = $("#cool-input");
+
+        if ($coolInput.val() == "racecars"){
+            $coolInput.val("lasers");
+        }
+    },100);
+</script> -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<label>
+    <input type="radio" name="duck[favorite_toy]" value="racecars">
+    Racecars
+</label>
+
+<label>
+    <input type="radio" name="duck[favorite_toy]" value="lasers">
+    Lasers
+</label>
+
+<label>
+    <input type="radio" name="duck[favorite_toy]" value="aeroplanes">
+    Aeroplanes
+</label>
+
+
+<script>
+    window.setInterval(() => {
+        const $coolInputs = $("input");
+
+        // unselect any item.
+        $coolInputs.prop("checked", false);
+
+        // randomly samples a number 0...3.
+        const i = Math.floor(3 * Math.random());
+
+        // Indexing takes us out of jQuery world!
+        const coolInput = $coolInputs[i];
+        // We can **wrap** an HTMLElement to create a jQuery object with one
+        // item; the wrapped element.
+        const $coolInput = $(coolInput);
+        $coolInput.prop("checked", true);
+    }, 200);
+</script>

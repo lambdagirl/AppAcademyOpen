@@ -1,0 +1,37 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<div>
+  <ul></ul>
+</div>
+
+<script>
+  const coolThings = [
+    "racecars",
+    "lasers",
+    "aeroplanes"
+  ];
+
+  let i = 0;
+  window.setInterval( () => {
+    const $ul = $("ul");
+    if ($ul.children().length == 10) {
+      // $ul.children() returns a jQuery object containing all the
+      // children; we then call `#remove`, which implicitly iterates
+      // over the set, removing each of them.
+      $ul.children().remove();
+    }
+
+    //const li = document.createElement("li");
+    //li.textContent = coolThings[i];
+
+    //jQuery way
+    const $li = $("<li></li>");
+    $li.text(coolThings[i]);
+    $li.attr("style", "background-color:green");
+
+    // jQuery#append is just like HTMLElement#appendChild
+    $ul.append($li);
+
+    i = (i + 1) % 3;
+  }, 1000);
+</script>

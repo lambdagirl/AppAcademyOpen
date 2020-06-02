@@ -1,0 +1,54 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<style>
+    .red {
+        background-color: red;
+    }
+    .green {
+        background-color: green;
+    }
+    .blue {
+        background-color: blue;
+    }
+</style>
+<ul>
+    <li>Racecars</li>
+    <li>Lasers</li>
+    <li>Aeroplanes</li>
+</ul>
+<p>Something else</p>
+
+
+<script>
+    console.log("DOM WAY");
+    const listItems = document.querySelectorAll("li");
+    for (let i = 0; i < listItems.length; i++) {
+        console.log(listItems[i].textContent);
+    }
+    // document.querySelectorAll("li") returns a NodeList, 
+    // $("li") returns a jQuery object. 
+    console.log("Jquery Way");
+    const $listItems = $("li");
+    for (let i = 0; i < listItems.length; i++) {
+        console.log($listItems[i].textContent);
+    }
+    
+    // you can iterate with the each method;
+    $listItems.each(function(index){
+        // The function is called for each `HTMLElement` in `$listItems`;
+        // each time it sets `this` to the next `HTMLElement` in the set.
+        console.log([index, this.textContent].join(" "));
+    })
+
+    window.setTimeout(()=>{
+        $listItems.addClass("green");
+    }, 100)
+    // const $ul = $('ul');
+    // $ul.children().attr("style", "background-color:red")
+    // $ul.parent().attr("style", "background-color:green")
+    // $ul.siblings().attr("style","color: blue")
+
+</script>
+
+<!-- jQuery#removeClass (removes the class from each of the elements) 
+     jQuery#toggleClass (removes the class from each element that has it, adds it to any that don't). -->
+
