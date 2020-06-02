@@ -1,0 +1,79 @@
+<style>
+    .red {background-color: red;}
+    .green {background-color: green;}
+</style>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <ul id = "cats">
+            <li class="green">Ruby</li>
+            <li class="red">Nana</li>
+        </ul>
+        <p>ALL PARAGRAPHS MUST DIE</p>
+        <form id="cat-form">
+            <label>
+                Name
+                <input type="text" name ="cat[name]" id="cat_name">
+            </label>
+            <input type="submit" value="Create Cat!">
+        </form>
+        <button id="alert-button">Click me for an alert</button>
+        <input type="text" id="mystring">
+        <p id="mystring-reversed"></p>
+    </body>
+</html>
+<script>
+    // window.setTimeout(()=>{
+    //     const ul = document.getElementById("cats");
+    //     const li = document.createElement("li");
+    //     li.textContent = "This is injected by javascript!";
+    //     ul.appendChild(li);
+    // },1000)
+    // window.setTimeout(() => {
+    //     const reds = document.getElementsByClassName("red");
+    //     const greens = document.getElementsByClassName("green");
+
+    //     for (let i = 0; i < reds.length;i++){
+    //         reds[i].className = "green";
+    //     }
+    //     for (let i = 0; i < greens.length; i++) {
+    //         greens[i].className = "red";
+    //     }
+    //     // disable the input
+    //     document.getElementById("cat_name").disabled = true;
+
+    //     const paragrah = document.querySelector("p");
+    //     paragrah.parentElement.removeChild(paragrah);
+    // }, 1000);
+    const catFormEl = document.getElementById("cat-form");
+    catFormEl.addEventListener("submit", event => {
+        event.preventDefault();
+        const catNameInputEl = document.getElementById("cat_name")
+        const catName = catNameInputEl.value;
+        catNameInputEl.value ="";
+
+        const ul = document.getElementById("cats");
+        const li = document.createElement("li");
+        li.textContent = catName;
+        ul.appendChild(li);
+    });
+
+    const buttonEl = document.getElementById("alert-button");
+    buttonEl.addEventListener("click", event => {
+        alert("Hello");
+    });
+    const inputEl = document.getElementById("mystring");
+    const pEl = document.getElementById("mystring-reversed");
+    inputEl.addEventListener("input",()=>{
+        const value = inputEl.value;
+        pEl.textContent = value.split("").reverse().join("");
+    });
+
+    pEl.addEventListener("mouseover",()=>{
+        alert("You Mosed over me!")
+    })
+</script>
+
+
