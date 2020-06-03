@@ -26,6 +26,24 @@ class View {
 
     $square.addClass(currentPlayer);
 
+    if (this.game.isOver()){
+      this.$el.off("click");
+      this.$el.addClass("gameover");
+
+      const winner = this.game.winner();
+      const $figcaption = $("<figcaption>");
+
+      if (winner){
+        this.$el.addClass(`winner-${winner}`);
+        $figcaption.html(`You win, ${winner}!`);
+
+      }else{
+        $figcaption.html("this is a draw!");
+      }
+
+      this.$el.append($figcaption);
+    }
+
   }
 
   setupBoard() {

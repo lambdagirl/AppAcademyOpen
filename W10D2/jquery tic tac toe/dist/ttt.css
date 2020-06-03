@@ -52,3 +52,18 @@ background-color: white;
     
     content: attr(class);
 }
+
+.gameover li{
+    color: red;
+    background-color: white;
+}
+
+.winner-x .x,
+.winner-o .o {
+    background-color: greenyellow;
+    color: white;
+}
+
+figcaption {
+  font-size: 30px;
+}
