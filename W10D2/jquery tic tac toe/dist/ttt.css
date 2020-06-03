@@ -49,11 +49,6 @@ background-color: white;
     text-align: center;
     font-size: 60px;
     line-height: 80px;
-}
-
-.x:after{
-    content: "x";
-}
-.o:after{
-    content: "o";
+    
+    content: attr(class);
 }
