@@ -12,6 +12,12 @@
     /* git rid of text */
     overflow: hidden;
 }
+
+[class*="icon-small-"]{
+    width: 20px;
+    padding-top: 20px;
+}
+
 .icon-comment{
     background-position: 0 0%;
 
@@ -31,4 +37,19 @@
 }
 .icon-reblog:hover{
     background-position: 0 55%;
+}
+.icon-small-wall {
+  background-position: 0 -225px;
+}
+
+.icon-small-about {
+  background-position: 0 -175px;
+}
+
+.icon-small-friends {
+  background-position: 0 -150px;
+}
+
+.icon-small-photos {
+  background-position: 0 -200px;
 }
