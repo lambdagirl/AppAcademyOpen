@@ -16,5 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
   canvasEl.width = 800;
   const ctx = canvasEl.getContext("2d");
   mo.draw(ctx);
+mo.move();
+
+mo.move();
+
+mo.move();
+
+mo.move();
+
+mo.move();
+mo.move();
+mo.move();
+mo.move();
+mo.move();
+
+
 });
 
