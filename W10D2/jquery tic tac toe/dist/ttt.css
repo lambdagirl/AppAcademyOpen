@@ -30,3 +30,30 @@ h1{
     font-size: 50px;
     font-weight: bold;
 }
+.x,
+.o {
+  background: white;
+  cursor: default;
+}
+
+.x:hover
+.o:hover
+{
+background-color: white;
+}
+
+.x:after,
+.o:after{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.x:after{
+    content: "x";
+}
+.o:after{
+    content: "o";
+}
