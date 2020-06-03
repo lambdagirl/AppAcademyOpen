@@ -1,0 +1,70 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<ul id="cool-things"></ul>
+<h4>New Cool Things</h4>
+<form id="cool-thing-form">
+    <label>
+        Cool Thing 
+        <input type="text" name="cool_thing" id="cool_thing">
+    </label>
+    <input type="submit" value="create cool things!">
+</form>
+
+<button>Toggle Annoying Handler</button>
+<p>Try to hover over me!</p>
+
+<ul>
+    <li>Racecars</li>
+    <li>Lasers</li>
+    <li>Aeroplanes</li>
+</ul>
+
+<script>
+$("#cool-thing-form").on("submit", event=>{
+    event.preventDefault();
+
+    const $input =$("#cool_thing");
+    const coolThingVal = $input.val();
+    //clear input
+    $input.val("");
+
+    const $li = $("<li></li>");
+    $li.text(coolThingVal);
+    $("#cool-things").append($li);
+})
+</script>
+
+
+<!-- Stop Listening -->
+<script>
+    let enabled = false;
+    const annoy =()=>{
+        alert("You are hovering over me!");
+    }
+    $("button").on("click", ()=>{
+        if (!enabled) {
+            $("p").on("mouseover", annoy);
+            enabled = true;
+        } else {
+            $("p").off("mouseover", annoy);
+            enabled = false;
+        }
+    });
+</script>
+
+<!-- The Event object: currentTarget and preventDefault -->
+
+<script>
+    var $listItems = $("li");
+    $listItems.on("mouseover", event => {
+        const currentTarget = event.currentTarget;
+        const $currentTarget = $(currentTarget);
+        alert($currentTarget.text());
+    })
+</script>
+
+<!-- preventDefault. This stops the event from triggering any built-in actions. This is most important for form submit
+events, since if the event is not canceled by your JavaScript code, the browser will perform the default action, which
+is to make an HTTP request submitting a form. -->
+<!-- Note that we install the same event handler on all three li elements. The only way the event handler knows which list
+item is being moused over is through event.currentTarget. event.currentTarget is always an HTMLElement, it is common to
+create a jQuery object wrapping event.currentTarget so we can use jQuery methods. -->
