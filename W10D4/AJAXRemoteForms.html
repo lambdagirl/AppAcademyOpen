@@ -1,0 +1,31 @@
+<!-- notice how we don't set the action/method on the form tag -->
+<form id="cat-form">
+    <input type="text" name="cat[name]">
+    <input type="text" name="cat[color]">
+    <input type="submit">
+</form>
+
+<script>
+$('#cat-form').on('submit', (event)=>{
+    event.preventDefault();
+    // const formData = $(event.currentTarget).serialize();
+    // If you filled out name "Gizmo" and color "Black", then
+    // formData == "cat%5Bname%5D=Gizmo&cat%5Bcolor%5D=Black"
+    const formData = $(event.currentTarget).serializeJson();
+    /* formData is now an easy-to-use POJO
+        formData == {
+            cat: {
+            name: 'Gizmo',
+            color: 'Black'
+            }
+        }*/
+    $ajax({
+        url: '/cats',
+        type: 'POST',
+        data =formData,
+        success(){
+            console.log("Your call back here!");
+        }
+    });
+})
+</script>
