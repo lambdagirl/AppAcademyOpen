@@ -11,7 +11,7 @@ class ChallengesController < ApplicationController
         redirect_to challenge_url(@challenge)
       else
         flash.now[:errors] = @challenge.errors.full_messages
-      render :new
+        render :new
       end
     end
 
