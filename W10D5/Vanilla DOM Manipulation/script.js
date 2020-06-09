@@ -35,8 +35,21 @@ placeSubmitButton.addEventListener("click", addLi);
 
   // adding new photos
 
-  // --- your code here!
+  const addImageLi = (e) => {
+    e.preventDefault();
+    const imageInput = document.querySelector(".photo-url-input");
+    const imageURL = imageInput.value;
+    imageInput.value = "";
+    const newImageTag = document.createElement("img");
+    newImageTag.src = imageURL;
+    const liItem = document.createElement('li');
+    liItem.appendChild(newImageTag);
+    const imageList = document.querySelector(".dog-photos");
+    imageList.appendChild(liItem);
+  }
 
+  const imageSubmitButton = document.querySelector(".photo-url-submit");
+  imageSubmitButton.addEventListener("click",addImageLi);
 
 
 });
