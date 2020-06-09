@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const listSubmitButton = document.querySelector(".favorite-submit");
   listSubmitButton.addEventListener("click", handleFavoriteSubmit);
+
+  
   const showPhotoForm = (e) => {
     const photoFormDiv = document.querySelector(".photo-form-container");
     if (photoFormDiv.className === "photo-form-container") {
@@ -33,8 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
       photoFormDiv.className = "photo-form-container";
     }
   };
+
   const photoFormShowButton = document.querySelector(".photo-show-button");
   photoFormShowButton.addEventListener("click", showPhotoForm);
+
   const handlePhotoSubmit = (e) => {
     e.preventDefault();
     const photoUrlInput = document.querySelector(".photo-url-input");

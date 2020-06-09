@@ -15,10 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
   // adding SF places as list items
 
-  // --- your code here!
 const addLi = (e) =>{
   e.preventDefault();
   const liInput = document.querySelector(".favorite-input");
@@ -32,9 +30,7 @@ const addLi = (e) =>{
 
 const placeSubmitButton = document.querySelector(".favorite-submit");
 placeSubmitButton.addEventListener("click", addLi);
-
   // adding new photos
-
   const addImageLi = (e) => {
     e.preventDefault();
     const imageInput = document.querySelector(".photo-url-input");
@@ -46,10 +42,20 @@ placeSubmitButton.addEventListener("click", addLi);
     liItem.appendChild(newImageTag);
     const imageList = document.querySelector(".dog-photos");
     imageList.appendChild(liItem);
-  }
-
+  };
   const imageSubmitButton = document.querySelector(".photo-url-submit");
   imageSubmitButton.addEventListener("click",addImageLi);
+  const showPhotoForm = (e) =>{
+    const photoFormDiv = document.querySelector(".photo-form-container");
+    if (photoFormDiv.className === "photo-form-container"){
+      photoFormDiv.classList = "photo-form-container hidden";
+    }else{
+      photoFormDiv.className = "photo-form-container";
+    }
+  };
+
+  const photoFormShowButton = document.querySelector(".photo-show-button");
+  photoFormShowButton.addEventListener("click", showPhotoForm);
 
 
 });
