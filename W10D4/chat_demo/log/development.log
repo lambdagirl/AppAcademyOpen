@@ -1,0 +1,653 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/zpz/Downloads/chat_demo/config/environment.rb:5)
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20150327005752)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-08 20:15:01.045324"], ["updated_at", "2020-06-08 20:15:01.045324"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20150327005752)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-08 20:15:01.058322"], ["updated_at", "2020-06-08 20:15:01.058322"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-06-08 20:15:01.061708"], ["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/zpz/Downloads/chat_demo/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2020-06-08 20:17:05.691405"], ["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-06-08 20:17:05.694431"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2020-06-08 13:17:47 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 2599ms (Views: 579.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2020-06-08 13:17:50 -0700
+Started GET "/assets/bundle.self-5dd408dc846d92349f68dae522fa76a42e1ece741db29133f160c28de6874725.js?body=1" for ::1 at 2020-06-08 13:17:50 -0700
+Started GET "/assets/application.self-4eb5338f9a944015178a8b2d4c15eecd22b5130e2eff5c6c1d353c48dc70b934.css?body=1" for ::1 at 2020-06-08 13:17:50 -0700
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2020-06-08 13:17:50 -0700
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2020-06-08 13:17:50 -0700
+Started POST "/messages" for ::1 at 2020-06-08 13:17:54 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"++p4YVAuvtVP9QAdTTAQ7ja1m7lqRk7zxDfvmG1LDbT6xCyXqqXVD8HHNbM/6gC+DjEXLTgxia+Stkml1Pvg7A==", "message"=>{"author"=>"rere", "text"=>"rere"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rere"], ["text", "rere"], ["created_at", "2020-06-08 20:17:56.129340"], ["updated_at", "2020-06-08 20:17:56.129340"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2017ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:39:47 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 2067ms (Views: 55.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 14:39:53 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"yBJzcV0dk16JVyycKeiDY2EMJ1duxMuKilYFi83k84TJPCeHp5b4hAdlGTJbMpMzWYirwzyzDNbc16O2dFQe3A==", "message"=>{"author"=>"rrr", "text"=>"rrr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rrr"], ["text", "rrr"], ["created_at", "2020-06-08 21:39:55.028773"], ["updated_at", "2020-06-08 21:39:55.028773"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2011ms (ActiveRecord: 1.4ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 14:40:39 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"yBJzcV0dk16JVyycKeiDY2EMJ1duxMuKilYFi83k84TJPCeHp5b4hAdlGTJbMpMzWYirwzyzDNbc16O2dFQe3A==", "message"=>{"author"=>"rrr", "text"=>"rrr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rrr"], ["text", "rrr"], ["created_at", "2020-06-08 21:40:42.007819"], ["updated_at", "2020-06-08 21:40:42.007819"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2014ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:40:48 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2040ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:42:47 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2029ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 14:42:51 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"RQWvERsCh5i7OtdnWSDLTw1idc9D2y8LuFUKLoPIDCVEK/vn4YnsQjUI4skr+tsfNeb5WxGs6Ffu1KwTOnjhfQ==", "message"=>{"author"=>"ee", "text"=>"ee"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "ee"], ["text", "ee"], ["created_at", "2020-06-08 21:42:53.224341"], ["updated_at", "2020-06-08 21:42:53.224341"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2008ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:43:00 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2037ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:45:05 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 2313ms (Views: 293.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2020-06-08 14:45:08 -0700
+Started GET "/assets/bundle.self-6dc7444eeda71d7095f271781afdc5f513e136e2b00fad1c5c0108e31ac07ddb.js?body=1" for ::1 at 2020-06-08 14:45:08 -0700
+Started POST "/messages" for ::1 at 2020-06-08 14:45:11 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"/d70k+1+XfGrzp9MJfCe3a8NM7EjQQlH993NJhoaKkb88KBlF/U2KyX8quJXKo6Nl4m/JXE2zhuhXGsbo6rHHg==", "message"=>{"author"=>"33", "text"=>"33"}}
+Started POST "/messages" for ::1 at 2020-06-08 14:45:12 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"/d70k+1+XfGrzp9MJfCe3a8NM7EjQQlH993NJhoaKkb88KBlF/U2KyX8quJXKo6Nl4m/JXE2zhuhXGsbo6rHHg==", "message"=>{"author"=>"33", "text"=>"33"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "33"], ["text", "33"], ["created_at", "2020-06-08 21:45:13.124635"], ["updated_at", "2020-06-08 21:45:13.124635"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2009ms (ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "33"], ["text", "33"], ["created_at", "2020-06-08 21:45:14.484724"], ["updated_at", "2020-06-08 21:45:14.484724"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2005ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:45:14 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2025ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:48:56 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2055ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:49:17 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2037ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:52:54 -0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#index as HTML
+Started GET "/" for ::1 at 2020-06-08 14:52:55 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (8.8ms)
+  Rendered messages/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 2338ms (Views: 326.5ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 2828ms (Views: 337.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bundle.self-0045f7ecf1af728489fe364a08b47444a69f8c0e6798b8183b73c5f00ef97f7e.js?body=1" for ::1 at 2020-06-08 14:52:57 -0700
+Started GET "/" for ::1 at 2020-06-08 14:53:48 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 2038ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 14:56:22 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2093ms (Views: 85.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-2eae5cf58d2969ef1883e75ec80d54aae9d028415a6399cf53d8a89bb467bba6.js?body=1" for ::1 at 2020-06-08 14:56:24 -0700
+Started GET "/" for ::1 at 2020-06-08 15:07:56 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2085ms (Views: 81.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bundle.self-74be28eab3d48a2bb12097e924c9c694a6a35188dc7437836619632fc79affe1.js?body=1" for ::1 at 2020-06-08 15:07:58 -0700
+Started POST "/messages" for ::1 at 2020-06-08 15:08:00 -0700
+Processing by MessagesController#create as */*
+Completed 400 Bad Request in 2002ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/messages_controller.rb:21:in `message_params'
+app/controllers/messages_controller.rb:9:in `create'
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.8ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (137.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started POST "/messages" for ::1 at 2020-06-08 15:08:05 -0700
+Processing by MessagesController#create as */*
+Completed 400 Bad Request in 2006ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/messages_controller.rb:21:in `message_params'
+app/controllers/messages_controller.rb:9:in `create'
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.5ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (113.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started GET "/" for ::1 at 2020-06-08 15:09:35 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2092ms (Views: 85.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bundle.self-85b300efed5eb0592389b712caf27e931e41db73fec6365287a44b2ab6e2fcde.js?body=1" for ::1 at 2020-06-08 15:09:37 -0700
+Started POST "/messages" for ::1 at 2020-06-08 15:09:39 -0700
+Processing by MessagesController#create as */*
+Completed 400 Bad Request in 2005ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/messages_controller.rb:21:in `message_params'
+app/controllers/messages_controller.rb:9:in `create'
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.6ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (122.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started GET "/" for ::1 at 2020-06-08 15:09:48 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2078ms (Views: 70.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bundle.self-27cb333832b866f40a4b487d4a76d49ca53e833cc5bb7b629ddf282541efde5c.js?body=1" for ::1 at 2020-06-08 15:09:50 -0700
+Started POST "/messages" for ::1 at 2020-06-08 15:09:53 -0700
+Processing by MessagesController#create as */*
+Completed 400 Bad Request in 2004ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/messages_controller.rb:21:in `message_params'
+app/controllers/messages_controller.rb:9:in `create'
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.5ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (111.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started POST "/messages" for ::1 at 2020-06-08 15:12:09 -0700
+Processing by MessagesController#create as */*
+Completed 400 Bad Request in 2006ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message):
+  
+app/controllers/messages_controller.rb:21:in `message_params'
+app/controllers/messages_controller.rb:9:in `create'
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.6ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendering /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (115.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/zpz/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started GET "/" for ::1 at 2020-06-08 15:12:12 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2081ms (Views: 74.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bundle.self-253e1b22d04e93efde35b00521d4193a8b2d553f3424ec42731a5fc9dd291177.js?body=1" for ::1 at 2020-06-08 15:12:14 -0700
+Started POST "/messages" for ::1 at 2020-06-08 15:12:17 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"Dy8rAs8xZ6nI4mAj89pk3bma4DiMT03tXkHfbf1b0P4OAX/0NboMc0bQVY2BAHSNgR5srN44irEIwHlQROs9pg==", "message"=>{"author"=>"rrr", "text"=>"rrr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rrr"], ["text", "rrr"], ["created_at", "2020-06-08 22:12:19.239392"], ["updated_at", "2020-06-08 22:12:19.239392"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2010ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:12:19 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2024ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 15:13:38 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"hzmhTiQSovL3Qiv50RjvY59GlGDumReohMrxYMNlvi6GF/W43pnJKHlwHlejwv8zp8IY9Lzu0PTSS1ddetVTdg==", "message"=>{"author"=>"", "text"=>""}}
+Started GET "/" for ::1 at 2020-06-08 15:13:39 -0700
+Processing by MessagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", ""], ["text", ""], ["created_at", "2020-06-08 22:13:40.843686"], ["updated_at", "2020-06-08 22:13:40.843686"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2005ms (ActiveRecord: 1.2ms)
+
+
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2028ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 15:13:42 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"kenxC7NgmI/jiOZXCUxenDZJLyNRkffQ27YB+yxf4iyQx6X9SevzVW260/l7lk7MDs2jtwPmMIyNN6fGle8PdA==", "message"=>{"author"=>"", "text"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", ""], ["text", ""], ["created_at", "2020-06-08 22:13:44.262258"], ["updated_at", "2020-06-08 22:13:44.262258"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2007ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:13:44 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2025ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 15:17:11 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"i3Icf+WeDDHW7Ra/i8Vc9QrgWfZqnDQy7GfOv3tCrRWKXEiJHxVn61jfIxH5H0ylMmTVYjjr82665miCwvJATQ==", "message"=>{"author"=>"kkk", "text"=>"www"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "kkk"], ["text", "www"], ["created_at", "2020-06-08 22:17:13.244514"], ["updated_at", "2020-06-08 22:17:13.244514"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2009ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:17:13 -0700
+Processing by MessagesController#index as HTML
+Started POST "/messages" for ::1 at 2020-06-08 15:17:15 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"i3Icf+WeDDHW7Ra/i8Vc9QrgWfZqnDQy7GfOv3tCrRWKXEiJHxVn61jfIxH5H0ylMmTVYjjr82665miCwvJATQ==", "message"=>{"author"=>"kkk", "text"=>"www"}}
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2028ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "kkk"], ["text", "www"], ["created_at", "2020-06-08 22:17:17.254518"], ["updated_at", "2020-06-08 22:17:17.254518"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2007ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:17:17 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2023ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 15:17:27 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"uQM/o+MxUmkY5ondVg1CkZjnfFhASZ5slTCFQqabkzS4LWtVGbo5s5bUvHMk11LBoGPwzBI+WTDDsSN/Hyt+bA==", "message"=>{"author"=>"e", "text"=>"e"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "e"], ["text", "e"], ["created_at", "2020-06-08 22:17:29.903364"], ["updated_at", "2020-06-08 22:17:29.903364"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2007ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:17:30 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2026ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:19:09 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2082ms (Views: 75.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-56714432a9971e22477bcfdf0b11121143dbb8beed9a1190284265a0f7c23396.js?body=1" for ::1 at 2020-06-08 15:19:11 -0700
+Started POST "/messages" for ::1 at 2020-06-08 15:19:16 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"291ZiUYc8b0Sw4bthXI2QT4qZhSpPWkYtVV9GAtWowza8w1/vJeaZ5zxs0P3qCYRBq7qgPtKrkTj1NslsuZOVA==", "message"=>{"author"=>"rr", "text"=>"rrrrr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rr"], ["text", "rrrrr"], ["created_at", "2020-06-08 22:19:18.279024"], ["updated_at", "2020-06-08 22:19:18.279024"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2009ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 15:19:18 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2024ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 17:34:09 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"xFKN93xMMM1mUYK6dneQY+yQtXVEAkCyyzmrz7+meJHFfNkBhsdbF+hjtxQErYAz1BQ54RZ1h+6duA3yBhaVyQ==", "message"=>{"author"=>"dd", "text"=>"dd"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "dd"], ["text", "dd"], ["created_at", "2020-06-09 00:34:11.756532"], ["updated_at", "2020-06-09 00:34:11.756532"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2007ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:34:11 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 2105ms (Views: 98.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bundle.self-38f8c0695377396268186f79a77a9892d5df10fa3ed8273fe8e58dbdc19a6b0f.js?body=1" for ::1 at 2020-06-08 17:34:13 -0700
+Started POST "/messages" for ::1 at 2020-06-08 17:34:19 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"K/GA7ClWzps9JQioG8zRwCcQxK/v7TAqrbRLT91azjwq39Qa092lQbMXPQZpFsGQH5RIO72a93b7Ne1yZOojZA==", "message"=>{"author"=>"ddd", "text"=>"dd"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "ddd"], ["text", "dd"], ["created_at", "2020-06-09 00:34:21.902072"], ["updated_at", "2020-06-09 00:34:21.902072"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2009ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:34:21 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2023ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 17:35:24 -0700
+Processing by MessagesController#create as HTML
+  Parameters: {"authenticity_token"=>"2KGQ2P52v7Mb/H5W2L9Gly28gVMHRkDfGcu2n2ARxzbZj8QuBP3UaZXOS/iqZVbHFTgNx1Uxh4NPShCi2aEqbg==", "message"=>{"author"=>"www", "text"=>"www"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "www"], ["text", "www"], ["created_at", "2020-06-09 00:35:26.112645"], ["updated_at", "2020-06-09 00:35:26.112645"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2004ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:35:26 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2020ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for ::1 at 2020-06-08 17:35:34 -0700
+Processing by MessagesController#create as */*
+  Parameters: {"authenticity_token"=>"gImk6a/bCNdftd9IQ2k+ExvIjIGgElhWd9l8Hxu+YFeBp/AfVVBjDdGH6uYxsy5DI0wAFfJlnwohWNoiog6NDw==", "message"=>{"author"=>"ss", "text"=>"sss"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "ss"], ["text", "sss"], ["created_at", "2020-06-09 00:35:36.428660"], ["updated_at", "2020-06-09 00:35:36.428660"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 2008ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:35:36 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2020ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:36:43 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2073ms (Views: 68.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-78fcd50ea5719d32abd89eb9a3c591347378f0e31f64b98582d95465582e998e.js?body=1" for ::1 at 2020-06-08 17:36:45 -0700
+Started POST "/messages.json" for ::1 at 2020-06-08 17:36:49 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"uo8lrP6eG3f7L8VlLhy0lVwyPsWZbhlBdCKOwpOQiGi7oXFaBBVwrXUd8MtcxqTFZLayUcsZ3h0ioyj/KiBlMA==", "message"=>{"author"=>"www", "text"=>"www"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "www"], ["text", "www"], ["created_at", "2020-06-09 00:36:51.231195"], ["updated_at", "2020-06-09 00:36:51.231195"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2011ms (Views: 0.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 17:49:16 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2093ms (Views: 85.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bundle.self-504d7895e630cbf16292c9a22cf07e33fc37d8d90c65036d6add3c5035e85908.js?body=1" for ::1 at 2020-06-08 17:49:18 -0700
+Started POST "/messages.json" for ::1 at 2020-06-08 17:49:21 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"DVB3PiEZBUqTfIRs0/vwXPJZtdmYQ5dADxvy17aCEn0MfiPI25JukB1OscKhIeAMyt05Tco0UBxZmlTqDzL/JQ==", "message"=>{"author"=>"rrr", "text"=>"rrr"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rrr"], ["text", "rrr"], ["created_at", "2020-06-09 00:49:23.670077"], ["updated_at", "2020-06-09 00:49:23.670077"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2009ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/messages.json" for ::1 at 2020-06-08 17:49:32 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"DVB3PiEZBUqTfIRs0/vwXPJZtdmYQ5dADxvy17aCEn0MfiPI25JukB1OscKhIeAMyt05Tco0UBxZmlTqDzL/JQ==", "message"=>{"author"=>"rrrttt", "text"=>"rrrttt"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rrrttt"], ["text", "rrrttt"], ["created_at", "2020-06-09 00:49:34.378081"], ["updated_at", "2020-06-09 00:49:34.378081"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2007ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 21:38:29 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 2167ms (Views: 152.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bundle.self-0f63edfb9c0ecfc507159a4ebd75801f0cbd75c99e3fcb1848429bbc7819b4b9.js?body=1" for ::1 at 2020-06-08 21:38:31 -0700
+Started POST "/messages.json" for ::1 at 2020-06-08 21:38:35 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"H+c2B9hFHLf638cK8OWFJDv5YWWMHF4q9XOb5f3Gw2EeyWLxIs53bXTt8qSCP5V0A33t8d5rmXaj8j3YRHYuOQ==", "message"=>{"author"=>"rer", "text"=>"rere"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rer"], ["text", "rere"], ["created_at", "2020-06-09 04:38:37.639391"], ["updated_at", "2020-06-09 04:38:37.639391"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2011ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-08 21:39:24 -0700
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  Rendered messages/index.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 2126ms (Views: 120.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.self-5c6e79ae27070ecdbcd1d243b2be8d78d71c76699917f55ca8e48657cb32783c.js?body=1" for ::1 at 2020-06-08 21:39:26 -0700
+Started POST "/messages.json" for ::1 at 2020-06-08 21:39:30 -0700
+Processing by MessagesController#create as JSON
+  Parameters: {"authenticity_token"=>"4wOvEsdEnj2w+djcR675NqM6sT0Bhy15QlH0lMbFwFXiLfvkPc/15z7L7XI1dOlmm749qVPw6iUU0FKpf3UtDQ==", "message"=>{"author"=>"rer", "text"=>"rere"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("author", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "rer"], ["text", "rere"], ["created_at", "2020-06-09 04:39:32.426353"], ["updated_at", "2020-06-09 04:39:32.426353"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 2007ms (Views: 0.5ms | ActiveRecord: 1.8ms)
+
+
