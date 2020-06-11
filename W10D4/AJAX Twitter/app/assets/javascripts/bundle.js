@@ -86,13 +86,38 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/api_util.js":
+/*!******************************!*\
+  !*** ./frontend/api_util.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const APIUtil = {
+  followUser: (id) => APIUtil.changeFollowStatus(id, "POST"),
+  unfollowUser: (id) => APIUtil.changeFollowStatus(id, "DELETE"),
+
+  changeFollowStatus: (id, method) => (
+    $.ajax({
+      url: `/users/${id}/follow`,
+      dataType: "json",
+      method,
+    })
+  )
+}
+
+module.exports=APIUtil;
+
+/***/ }),
+
 /***/ "./frontend/follow_toggle.js":
 /*!***********************************!*\
   !*** ./frontend/follow_toggle.js ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+const APIUtil = __webpack_require__(/*! ./api_util */ "./frontend/api_util.js");
 class FollowToggle {
   constructor(el, options) {
     this.$el = $(el);
@@ -100,6 +125,8 @@ class FollowToggle {
     this.followState = (this.$el.data('initial-follow-state') ||
                         options.followState);
     this.render();
+
+    this.$el.on('click', this.handleClick.bind(this));
   }
 
   render() {
@@ -109,13 +136,33 @@ class FollowToggle {
         btnText = "Unfollow!";
         break;
       case "unfollowed":
-        btnText = "follow!";
+        btnText = "Follow!";
         break;
     }
     this.$el.html(btnText);
   }
 
+  handleClick(event) {
+    const followToggle = this;
 
+    event.preventDefault();
+
+    if (this.followState === "followed") {
+      this.followState = "unfollowing";
+      this.render();
+      APIUtil.unfollowUser(this.userId).then(() => {
+        followToggle.followState = "unfollowed";
+        followToggle.render();
+      });
+    } else if (this.followState === "unfollowed") {
+      this.followState = "following";
+      this.render();
+      APIUtil.followUser(this.userId).then(() => {
+        followToggle.followState = "followed";
+        followToggle.render();
+      });
+    }
+  }
 }
 
 module.exports = FollowToggle;
