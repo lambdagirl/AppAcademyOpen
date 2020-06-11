@@ -93,7 +93,32 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: Unexpected token (28:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|     e.preventDefault();\n|     this.followState = \n>   }\n| \n| }");
+class FollowToggle {
+  constructor(el, options) {
+    this.$el = $(el);
+    this.userId = this.$el.data('user-id') || options.userId;
+    this.followState = (this.$el.data('initial-follow-state') ||
+                        options.followState);
+    this.render();
+  }
+
+  render() {
+    let btnText;
+    switch (this.followState) {
+      case "followed":
+        btnText = "Unfollow!";
+        break;
+      case "unfollowed":
+        btnText = "follow!";
+        break;
+    }
+    this.$el.html(btnText);
+  }
+
+
+}
+
+module.exports = FollowToggle;
 
 /***/ }),
 

@@ -1,11 +1,9 @@
 class FollowToggle {
   constructor(el, options) {
     this.$el = $(el);
-    this.useId = this.$el.data("user-id") || options.userId;
-    this.followState =
-    this.$el.data("intial-follow-state") || options.followState;
-    debugger;
-
+    this.userId = this.$el.data('user-id') || options.userId;
+    this.followState = (this.$el.data('initial-follow-state') ||
+                        options.followState);
     this.render();
   }
 
@@ -22,10 +20,6 @@ class FollowToggle {
     this.$el.html(btnText);
   }
 
-  handleClick(e) {
-    e.preventDefault();
-    this.followState = 
-  }
 
 }
 
