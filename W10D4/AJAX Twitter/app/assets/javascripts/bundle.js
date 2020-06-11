@@ -104,7 +104,7 @@ const APIUtil = {
       method,
     })
   )
-}
+};
 
 module.exports=APIUtil;
 
@@ -133,13 +133,24 @@ class FollowToggle {
     let btnText;
     switch (this.followState) {
       case "followed":
+        this.$el.prop("disabled", false);
         btnText = "Unfollow!";
         break;
       case "unfollowed":
+        this.$el.prop("disabled",false);
         btnText = "Follow!";
+        break;
+      case "following":
+        this.$el.prop("disabled", true);
+        btnText = "following...";
+        break;
+      case "unfollowing":
+        this.$el.prop("disabled", true);
+        btnText = "unfollowing...";
         break;
     }
     this.$el.html(btnText);
+    
   }
 
   handleClick(event) {

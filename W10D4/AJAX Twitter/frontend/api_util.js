@@ -9,6 +9,6 @@ const APIUtil = {
       method,
     })
   )
-}
+};
 
 module.exports=APIUtil;
