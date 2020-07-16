@@ -5,7 +5,7 @@ const FollowToggle = require('./follow_toggle');
 class UsersSearch {
   constructor(el) {
     this.$el = $(el);
-    this.$input = this.$el.find('input[name=username]');
+    this.$input = this.$el.find("input[name=user_query]");
     this.$ul = this.$el.find('.users');
 
     this.$input.on('input', this.handleInput.bind(this));
@@ -27,7 +27,7 @@ class UsersSearch {
       const user = users[i];
 
       let $a = $('<a></a>');
-      $a.text(`@${user.username}`);
+      $a.text(`@${user.user_query}`);
       $a.attr('href', `/users/${user.id}`);
 
       const $followToggle = $('<button></button>');

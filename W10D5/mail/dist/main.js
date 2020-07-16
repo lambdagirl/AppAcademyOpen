@@ -91,9 +91,20 @@
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let Router = __webpack_require__(/*! ./router */ \"./src/router.js\");\nlet Compose = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module './compose'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nlet Inbox = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module './inbox'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nlet Sent = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module './sent'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\n\n// let routes = {\n//   compose: Compose,\n//   inbox: Inbox,\n//   sent: Sent,\n// };\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  let content = document.querySelector(\".content\");\n  router = new Router(content);\n  router.start();\n  window.location.hash = \"#inbox\";\n  let navItems = Array.from(document.querySelectorAll(\".sidebar-nav li\"));\n  navItems.forEach((navItem) => {\n    navItem.addEventListener(\"click\", () => {\n      let name = navItem.innerText.toLowerCase();\n      location.hash = name;\n    });\n  });\n});\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/router.js":
+/*!***********************!*\
+  !*** ./src/router.js ***!
+  \***********************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.addEventListener(\"DOMContentLoaded\",(event)=>{\n    window.location.hash =\"#inbox\";\n\n    const navButtons = Array.from(document.querySelectorAll(\".sidebar-nav li\"));\n    navButtons.forEach(navButton => {\n        navButton.addEventListener(\"click\", ()=> {\n            let name = navButton.innerText.toLowerCase();\n            location.hash = name;\n        });\n    });\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("class Router {\n  constructor(node, routes) {\n    this.node = node;\n    this.routes = routes;\n  }\n\n  start() {\n    this.render();\n    window.addEventListener(\"hashchange\", () => {\n      this.render();\n    });\n  }\n\n  render() {\n    this.node.innerHTML = \"\";\n    let component = this.activeRoute();\n    if (component) {\n      this.node.appendChild(component.render());\n    }\n  }\n\n  activeRoute() {\n    let hash = window.location.hash.substr(1);\n    let component = this.routes[hash];\n    return component;\n  }\n}\n\nmodule.exports = Router;\n\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ })
 

@@ -14,3 +14,6 @@ GameView.MOVES = {
     d:[1,0],
 }
 
+GameView.prototype.start = function start(){
+    this.bind
+}
